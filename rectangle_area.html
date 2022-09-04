@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Rectangle Area</title>
+    <style>
+        #result_sentence {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rectangle Area Calculator</h1>
+    <p>Width: <input type="text" id="width"></p>
+    <p>Length: <input type="text" id="length"></p>
+    <p><button onclick="findRectangleArea();">Find Area</button></p>
+    <p id="result_sentence">The rectangle area of <span id="span_width"></span> and <span id="span_length"></span> 
+        is <span id="calculated_area"></span></p>
+</body>
+<script>
+    // rectangle area = width * length
+    function findRectangleArea() {
+        width = document.getElementById("width").value;
+        length = document.getElementById("length").value
+        area = width * length
+        document.getElementById("span_width").innerHTML = width
+        document.getElementById("span_length").innerHTML = length
+        document.getElementById("calculated_area").innerHTML = area
+        document.getElementById("result_sentence").style.display = "block"
+    }
+</script>
+</html>
